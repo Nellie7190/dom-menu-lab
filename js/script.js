@@ -33,17 +33,19 @@ topMenuEl.setAttribute('class', 'flex-around');
 
 //3.1 *use foreach to: create 'a' element, *On the new element, add an href attribute with its value set to the hrefproperty of the "link" object, *Set the new element's content to the value of the textproperty of the "link" object, *Append the new element to the topMenuElelement.
 
-menuLinks.forEach(
-    menuLink.createElement('a');
-    document.createElement('a');
-)
+// menuLinks.forEach(
+//     document.createElement<a>
+// )
 
-console.log(menuLinks);
-// for(menuLink of menuLinks) {
-//     menuLink.createElement('a'));
-// }
+for(let menuLink of menuLinks) {
+    let aEl = document.createElement('a');
+    aEl.setAttribute('href', menuLink.href);
+    aEl.innerHTML = menuLink.text;   
+    topMenuEl.append(aEl);
+}
 
-//menuLinks.forEach(menuLink => document.createElement('a'));
+//menuLinks.forEach(menuLink => document.createElement<a>);
 
 //console.log(topMenuEl);
 //console.log(mainEl);
+console.log(menuLinks);
